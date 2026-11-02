@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Improvement Strategies for Lead Generation</title>
+<link rel="stylesheet" href="https://use.typekit.net/mhf6dih.css">
+<style>
+:root{
+  --ink:#000; --ink-2:#404040; --muted:#808080; --hint:#a3a3a3;
+  --gold:#9d0000; --gold-2:#9d0000; --cream:#f4f4f4; --link:#006bb4;
+  --line:rgba(255,255,255,.6); --line-2:rgba(255,255,255,.35);
+  --sans:'brother-1816',sans-serif;
+  --display:'mrs-eaves-xl-serif-narrow',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;letter-spacing:.005em;line-height:1.7;font-size:16px}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:#ccc;border-radius:99px}
+
+/* Aurora backdrop, retinted to Ethos palette */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45}
+.b1{width:540px;height:540px;background:#e4e4e4;top:-10%;left:-10%;animation:d1 22s ease-in-out infinite}
+.b2{width:620px;height:620px;background:#9d0000;bottom:-18%;right:-14%;opacity:.14;animation:d2 26s ease-in-out infinite}
+.b3{width:440px;height:440px;background:#d0d0d0;top:35%;left:45%;animation:d3 30s ease-in-out infinite}
+.b4{width:380px;height:380px;background:#ffffff;top:62%;left:10%;animation:d1 24s ease-in-out infinite reverse}
+@keyframes d1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-40px) scale(1.1)}}
+@keyframes d2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-80px,40px) scale(.95)}}
+@keyframes d3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,60px) scale(1.05)}}
+@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes wordSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.page{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:72px 20px 96px}
+
+.cut{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold)}
+.cut svg{display:block}
+
+/* Hero */
+.hero{padding:24px 8px 56px}
+.mark{position:relative;width:56px;height:56px;margin-bottom:28px}
+.mark .cut{animation:spin 18s linear infinite}
+.mark .ring{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(157,0,0,.35);animation:spin 30s linear infinite reverse}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.title{font-family:var(--display);font-weight:400;font-size:clamp(13px,3.6vw,36px);line-height:1.1;white-space:nowrap;text-transform:lowercase;color:var(--ink)}
+.title em{font-style:italic;color:var(--gold)}
+.title .w{display:inline-block;animation:wordSlide .7s cubic-bezier(.2,.7,.2,1) both}
+.title .w:nth-child(2){animation-delay:.15s}.title .w:nth-child(3){animation-delay:.3s}
+.tagline{margin-top:24px;font-size:15px;color:var(--muted);max-width:520px}
+.promises{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.promise{display:flex;flex-direction:column;gap:6px}
+.promise .cut{transition:transform .5s}.promise:hover .cut{transform:rotate(20deg)}
+.promise .metric{font-size:20px;line-height:1.1;color:var(--ink)}
+.promise .metric em{font-family:var(--display);font-style:italic;color:var(--gold-2);font-size:1.3em}
+.promise .lbl{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+
+/* Glass card */
+.glass{position:relative;background:rgba(255,255,255,.55);backdrop-filter:blur(30px) saturate(1.4);-webkit-backdrop-filter:blur(30px) saturate(1.4);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 80px -24px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.8);padding:48px 44px;margin-bottom:32px;overflow:hidden;animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.glass::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.5),transparent 40%)}
+.glass>*{position:relative}
+
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.6);border:1px solid var(--line-2);border-radius:99px;padding:6px 14px 6px 10px;margin-bottom:18px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,7vw,60px);line-height:1;text-transform:lowercase;color:var(--ink);margin-bottom:22px}
+h2 em{font-style:italic;color:var(--gold)}
+h2.sm{font-size:16px;line-height:1.3;margin-bottom:14px}
+h3{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+h3::after{content:'';flex:1;height:1px;background:rgba(0,0,0,.12)}
+p{margin-bottom:14px;color:var(--ink-2)}
+strong{font-weight:500;color:var(--ink)}
+.lead{font-family:var(--display);font-size:clamp(24px,3.4vw,32px);line-height:1.2;color:var(--ink);margin-bottom:18px}
+.lead em{font-style:italic;color:var(--gold)}
+
+ul.d,ol.n{list-style:none;margin-bottom:14px}
+ul.d li,ol.n li{position:relative;padding-left:28px;margin-bottom:10px;color:var(--ink-2)}
+ul.d li::before{content:'';position:absolute;left:4px;top:.62em;width:8px;height:8px;border:1px solid var(--gold);transform:rotate(45deg)}
+ol.n{counter-reset:n}
+ol.n li{counter-increment:n;padding-left:40px}
+ol.n li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:-.05em;font-family:var(--display);font-style:italic;font-size:22px;color:var(--gold)}
+
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.pills span{font-size:13px;background:rgba(255,255,255,.65);border:1px solid var(--line);border-radius:99px;padding:6px 14px}
+
+.shot{margin:18px 0}
+.shot img{width:100%;display:block;border-radius:18px;border:1px solid var(--line);box-shadow:0 14px 34px -16px rgba(0,0,0,.3)}
+.shot.wide img{max-height:none}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.duo .shot{margin:0}
+@media (max-width:720px){.duo{grid-template-columns:1fr}}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.shots .shot{margin:0}
+@media (max-width:720px){.shots{grid-template-columns:repeat(2,1fr)}}
+.imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:26px 0}
+.imgs img{width:100%;height:180px;object-fit:cover;border-radius:18px;display:block;filter:saturate(.85);border:1px solid var(--line)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0 10px}
+.card{background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:20px;padding:22px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 34px -14px rgba(0,0,0,.25)}
+.card h4{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;color:var(--ink);margin:10px 0 6px}
+.card p{font-size:14.5px;margin:0}
+
+.ai-tag{display:inline-block;vertical-align:middle;margin-left:6px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(157,0,0,.07);border:1px solid rgba(157,0,0,.3);border-radius:99px;padding:1px 10px;white-space:nowrap}
+.callout{margin:20px 0;background:rgba(157,0,0,.06);border:1px solid rgba(157,0,0,.25);border-left:4px solid var(--gold);border-radius:16px;padding:18px 22px;display:flex;gap:14px;align-items:flex-start}
+.callout b{display:block;font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.callout strong{color:var(--gold)}
+.kpi{margin-top:32px;background:#0b0b0d;color:#e8e8e8;border-radius:20px;padding:24px 28px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 14px 34px -12px rgba(0,0,0,.5)}
+.kpi b{display:block;font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.kpi .cut{margin-top:2px}
+
+.targets{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.targets div{background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:20px;padding:20px;text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.targets span{display:block;font-family:var(--display);font-style:italic;font-size:38px;line-height:1.1;color:var(--gold-2);text-transform:none;letter-spacing:0;margin-bottom:4px}
+
+.rail{position:relative;margin-top:10px;padding-left:34px}
+.rail::before{content:'';position:absolute;left:11px;top:10px;bottom:10px;width:1px;background:rgba(0,0,0,.14)}
+.step{position:relative;margin-bottom:22px}
+.step .cut{position:absolute;left:-34px;top:2px;background:var(--cream);border-radius:50%}
+.step h4{font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.step p{margin:0}
+
+.sig{text-align:center;padding:40px 0 0;color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.sig .cut{margin-bottom:10px}
+
+@media (max-width:720px){
+  .glass{padding:32px 22px;border-radius:22px}
+  .promises{grid-template-columns:repeat(2,1fr)}
+  .page{padding:40px 14px 64px}
+  .title{overflow-wrap:normal}
+  .targets{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brilliant" viewBox="0 0 24 24"><!-- classic wristwatch -->
+    <path d="M8.5 7 L9.5 2.5 H14.5 L15.5 7 M8.5 17 L9.5 21.5 H14.5 L15.5 17" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12 8.5V12l2.4 1.6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M12 6.4v.8M12 16.8v.8M6.4 12h.8M16.8 12h.8" stroke="currentColor" stroke-width=".8" opacity=".6"/>
+  </symbol>
+  <symbol id="marquise" viewBox="0 0 24 24"><!-- chronograph -->
+    <circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M10 2.5h4M12 2.5v3M18.5 6l1.5-1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M12 13V8.5M12 13l3 1.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="pear" viewBox="0 0 24 24"><!-- pocket watch -->
+    <circle cx="12" cy="14" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="12" cy="4.2" r="1.7" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M12 5.9V7M12 14V10.5M12 14l2.6 1.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="emerald" viewBox="0 0 24 24"><!-- rectangular dress watch -->
+    <path d="M8 6.5L8.8 2.5h6.4L16 6.5M8 17.5l.8 4h6.4l.8-4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    <rect x="6" y="6.5" width="12" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12 9v3l2 1.2" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="trillion" viewBox="0 0 24 24"><!-- watch crown & dial -->
+    <circle cx="11" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <rect x="18.5" y="10.5" width="3" height="3" rx=".8" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="11" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/>
+    <path d="M11 8.5V12l2.5 1.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<div class="aurora" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div></div>
+
+<div class="page">
+
+<header class="hero">
+  <div class="mark"><span class="ring"></span><span class="cut"><svg width="56" height="56"><use href="#brilliant"/></svg></span></div>
+  <div class="eyebrow">Ethos Watches · Growth Plan</div>
+  <h1 class="title"><span class="w">website improvement</span> <span class="w">strategies for</span> <span class="w"><em>lead generation</em></span></h1>
+  <div class="promises">
+    <div class="promise"><span class="cut"><svg width="22" height="22"><use href="#marquise"/></svg></span><div class="metric"><em>I</em> Discover</div><div class="lbl">Richer catalogue</div></div>
+    <div class="promise"><span class="cut"><svg width="22" height="22"><use href="#pear"/></svg></span><div class="metric"><em>II</em> Be the answer</div><div class="lbl">SEO &amp; GEO</div></div>
+    <div class="promise"><span class="cut"><svg width="22" height="22"><use href="#emerald"/></svg></span><div class="metric"><em>III</em> Speed</div><div class="lbl">Core Web Vitals</div></div>
+    <div class="promise"><span class="cut"><svg width="22" height="22"><use href="#trillion"/></svg></span><div class="metric"><em>IV</em> Convert</div><div class="lbl">Lead engines</div></div>
+  </div>
+</header>
+
+<section class="glass">
+  <h2 class="sm">a note to <em>evaluators</em></h2>
+  <p>I find PM-ing anything genuinely exciting. The proposed analysis and the solutions draw largely on my experience <strong>implementing many of these specific approaches at scale</strong> for brands with high-consideration purchases. I'm curious to see how they'll play out in a different product category.</p>
+  <p>I've used AI (Claude Opus &amp; Sonnet in VS Code Copilot) <strong>majorly only to visualise this submission</strong> and add connective phrasing between sentences. The research, solutions and narrative were developed through <strong>my thoughts and experience, online secondary research and a few suggestions from LLMs</strong>. I have marked the solutions suggested by AI with an <span class="ai-tag">AI suggestion</span> tag.</p>
+  <p style="margin:0">This submission was enriching!</p>
+</section>
+
+<section class="glass">
+  <span class="chip"><span class="cut"><svg width="14" height="14"><use href="#marquise"/></svg></span>Chapter I · Cataloguing</span>
+  <h2><em>discover</em></h2>
+  <p class="lead">Help buyers find, compare and fall for the right watch, <em>faster</em>.</p>
+
+  <h3>What to build</h3>
+  <ol class="n">
+    <li><strong>Show variants on the product page:</strong> dial colours and sizes as swatches, rather than separate products the user has to find in search. This reduces irritation and rage clicks, and lowers bounce rates.
+      <div class="duo">
+        <figure class="shot"><img src="images/variants-listing.png" alt="Two TAG Heuer Carrera colour variants listed as separate products"></figure>
+        <figure class="shot"><img src="images/variants-product-page.png" alt="TAG Heuer Carrera product page with a single dial colour"></figure>
+      </div>
+    </li>
+    <li><strong>Add guided ways to browse</strong> by occasion, budget, size and style. In my experience, emotional, intent-based purchases convert strongly in luxury.</li>
+    <li><strong>Link the catalogue and the Watch Guide both ways.</strong> Show "Featured in the Watch Guide" on product pages and "Shop the watches in this article" carousels in articles. Right now the blog is fast and well written but sits apart from the shop.</li>
+    <li><strong>Make listing pages richer:</strong> a second image on hover, case size and movement on each card, "In store at Bandra / Delhi" labels, "Limited / Only 2 in India" labels, and "Compare" checkboxes with a side-by-side view. <span class="ai-tag">AI suggestion</span></li>
+    <li><strong>Turn text into real calls-to-action, with a clear hierarchy.</strong> Today, "Speak with an Expert", "Sell Your Watch", "Buy Certified Pre-owned" and the rest look like promises, but some are links and some are static text, so they are not active, contactable features. Make them proper buttons: one primary action (Check our selling price), one secondary (Speak with an Expert, opening chat, call or video), and the rest as clear tertiary links.
+      <figure class="shot"><img src="images/cta-text-links.png" alt="Service options on the product page that look like links but are plain text" style="max-width:560px"></figure>
+    </li>
+    <li><strong>Let customers try the watch on, virtually.</strong> A buyer can see the watch on their own wrist from the desktop site, or by scanning a QR code to continue on their phone, so they are more confident before buying. Movado saw an <strong>8% increase in sales</strong> and a <strong>15% increase in lead flow</strong> from virtual try-on.
+      <figure class="shot"><img src="images/virtual-try-on.png" alt="Tangiblee virtual try-on syncing desktop to mobile with a QR code"></figure>
+    </li>
+    <li><strong>Show every watch from more than one angle.</strong> Many products have only a single image. A luxury buyer wants to see the case, clasp, dial and wrist presence before spending lakhs, so add several photos and short videos per watch.
+      <figure class="shot"><img src="images/single-image-product.png" alt="Norqain Adventure Sport product page with a single product image"></figure>
+    </li>
+  </ol>
+
+  <div class="kpi"><span class="cut"><svg width="20" height="20"><use href="#brilliant"/></svg></span><div><b>KPIs to track</b>Session time, bounce rate, pages per session and product views per session.</div></div>
+</section>
+
+<section class="glass">
+  <span class="chip"><span class="cut"><svg width="14" height="14"><use href="#pear"/></svg></span>Chapter II · SEO / GEO</span>
+  <h2>be the <em>answer</em></h2>
+  <p class="lead">These days a buyer asks <em>AI first</em>. Ethos needs to be the answer.</p>
+  <p>Ethos already ranks at the top in AI chat discovery:</p>
+  <figure class="shot wide"><img src="images/ai-chat-ranking.png" alt="Gemini listing Ethos Watch Boutiques first for buying luxury watches online in India"></figure>
+  <p>But as the screenshots below show, answer citations and product-recommendation URL redirections often do not point to Ethos, so click-throughs from AI answers are weak. The work is to track how AI describes the brand, fix it, and measure the traffic that converts across ChatGPT, Gemini, Perplexity and AI Overviews.</p>
+  <div class="shots">
+    <figure class="shot"><img src="images/chatgpt-sources.png" alt="ChatGPT sources list without Ethos"></figure>
+    <figure class="shot"><img src="images/chatgpt-reco-1.png" alt="ChatGPT recommendation linking to IWC and Ethos"></figure>
+    <figure class="shot"><img src="images/chatgpt-reco-2.png" alt="ChatGPT shortlist linking to brand websites"></figure>
+    <figure class="shot"><img src="images/chatgpt-reco-3.png" alt="ChatGPT shortlist continued, linking to brand websites"></figure>
+  </div>
+
+  <figure class="shot wide"><img src="images/ai-visibility-report.png" alt="Siftly AI Visibility Report for Ethos Watches"></figure>
+  <p>The AI Visibility Report above for Ethos Watches shows that Ethos's presence is strong, but there is room for improvement. <strong>Siftly</strong>, a Y Combinator-backed tool (a company I am currently in talks with for my current company), provides a strong solution to fix this at a relatively low cost (less than ₹1 lakh per month). It does the following for us:</p>
+  <figure class="shot wide"><img src="images/answer-program-scope.png" alt="What the Answer Program covers every month"></figure>
+
+  <h3>Key KPIs to track</h3>
+  <ul class="d">
+    <li><strong>AI share of voice:</strong> Ethos mentions vs. up to 5 competitors.</li>
+    <li><strong>Prompt coverage:</strong> share of 150 tracked prompts where Ethos appears.</li>
+    <li><strong>Citations and mentions:</strong> how often each engine names or links Ethos.</li>
+    <li><strong>AI-referred sessions:</strong> visits from AI engines, tracked in GA4/Adobe.</li>
+    <li><strong>Crawl and schema health:</strong> AI bot visits, crawl errors, schema coverage.</li>
+  </ul>
+</section>
+
+<section class="glass">
+  <span class="chip"><span class="cut"><svg width="14" height="14"><use href="#emerald"/></svg></span>Chapter III · Performance</span>
+  <h2><em>speed</em> sells</h2>
+  <p class="lead">Pages are loading <em>slowly</em>.</p>
+  <p>The Google Lighthouse speed score is in the red, with multiple suggestions flagged:</p>
+  <figure class="shot wide"><img src="images/lighthouse-score.png" alt="Lighthouse report for ethoswatches.com/brands.html showing a performance score of 27"></figure>
+  <figure class="shot wide"><img src="images/lighthouse-insights.png" alt="Lighthouse insights listing document latency, render-blocking requests and image delivery"></figure>
+  <figure class="shot wide"><img src="images/lighthouse-metrics.png" alt="Lighthouse metrics: FCP 11.2s, LCP 27.5s, TBT 1,980ms, Speed Index 26.4s"></figure>
+
+  <h3>Image rendering</h3>
+  <p>Image rendering is one of the key contributors to the low speed. Since this is a luxury platform, we can't compromise on quality.</p>
+  <figure class="shot wide"><img src="images/lighthouse-image-delivery.png" alt="Lighthouse image delivery audit showing estimated savings on catalogue images"></figure>
+  <div class="callout"><span class="cut"><svg width="20" height="20"><use href="#marquise"/></svg></span><div><b>Quick fix</b>Use an image compression tool like <strong>N7</strong> to compress images <strong>without losing quality</strong>. It increases speed drastically, and I have implemented this at scale on <strong>Mia by Tanishq</strong>.</div></div>
+
+  <h3>Two other major but easier technical fixes</h3>
+  <ol class="n">
+    <li><strong>Cut server response time.</strong> Cache pages at the CDN edge and trim the product-listing HTML (document request latency alone is worth about 5.1 s). <span class="ai-tag">AI suggestion</span></li>
+    <li><strong>Unblock rendering.</strong> Defer non-critical scripts and CSS and set font-display: swap (about 2 s saved), plus longer cache lifetimes for static files. <span class="ai-tag">AI suggestion</span></li>
+  </ol>
+  <div class="kpi"><span class="cut"><svg width="20" height="20"><use href="#brilliant"/></svg></span><div><b>KPIs to track</b>Reduced bounce rate, increased session time and increased leads.</div></div>
+</section>
+
+<section class="glass">
+  <span class="chip"><span class="cut"><svg width="14" height="14"><use href="#trillion"/></svg></span>Chapter IV · Lead &amp; conversion engines</span>
+  <h2><em>convert</em></h2>
+
+  <h3>Improve contactability</h3>
+  <p><strong>A. Introduce live video shopping from stores, or let buyers schedule a video call.</strong> Even Apple does it, in an elegant way:</p>
+  <figure class="shot"><img src="images/apple-live-shopping.png" alt="Apple Store India contact options including Shop live with a Specialist" style="max-width:460px;margin:0 auto"></figure>
+  <p>Live video shopping increases lead generation, and assisted conversion runs at about 15%.</p>
+  <div class="callout"><span class="cut"><svg width="20" height="20"><use href="#marquise"/></svg></span><div><b>Low-hanging fruit</b>A simple plugin from a tool called <strong>Poppin</strong>, which charges about <strong>₹4k per month per store</strong>.</div></div>
+  <p><strong>B. Book an appointment from every product page.</strong> Choose a nearby store, date, time, and whether to view in store, by video call or at home. Send an automatic WhatsApp confirmation and route the lead to that store's CRM.</p>
+
+  <p><strong>C. In-store stock visibility.</strong> Show what each boutique has on its floor, as in the store page below. It sets expectations and gives buyers an aspiration to visit the store. The full stock need not be shown: tease selected pieces with labels like "Under the wraps" or "Just arrived".</p>
+  <div class="callout"><span class="cut"><svg width="20" height="20"><use href="#marquise"/></svg></span><div><b>Low-hanging fruit</b>As confirmed in the interview, true omni is already enabled, and store stock information already flows through the systems.</div></div>
+  <figure class="shot"><img src="images/instore-stock-visibility.png" alt="Store page listing in-store products with a Book a Visit button"></figure>
+
+  <h3>Trade-in / upgrade</h3>
+  <p><strong>Trade-in valuation on product pages.</strong> "Upgrade your watch – get an instant estimate" using Second Movement data. Upgraders are high-value buyers, and this captures both sides of the deal. In my experience this works wonderfully for lead generation: it mirrors the exchange-for-old-gold programmes in the jewellery business.</p>
+
+  <h3>Lead scoring</h3>
+  <p><strong>Implement the lead scoring algorithm as discussed in the interview.</strong> Build a customer data platform from existing CleverTap/GA4 data. Score visitors on behaviour (repeat product views, price band, comparisons) and send hot visitors to advisors by WhatsApp or phone within 15 minutes.</p>
+
+  <h3>Social proof &amp; urgency</h3>
+  <ul class="d">
+    <li><strong>Currently viewing / people viewed:</strong> live and recent-viewer counts on product pages.</li>
+    <li><strong>Probability to sell out:</strong> a stock-and-demand indicator for scarce models, driving earlier enquiries.</li>
+  </ul>
+
+    <div class="kpi"><span class="cut"><svg width="20" height="20"><use href="#brilliant"/></svg></span><div><b>What makes these work</b>One lead record (CRM) with the source, watch reference and store attached. A 15-minute response target, and the full funnel measured: visit → lead → appointment → sale. Judge success on qualified leads and showroom visits, not form submissions.</div></div>
+</section>
+
+<section class="glass">
+  <span class="chip"><span class="cut"><svg width="14" height="14"><use href="#brilliant"/></svg></span>Roadmap</span>
+  <h2>the first <em>90 days</em></h2>
+  <p class="lead">Start with the <em>quick wins</em>, then build.</p>
+  <div class="rail">
+    <div class="step"><span class="cut"><svg width="22" height="22"><use href="#marquise"/></svg></span><h4>Days 0–30 · Low-hanging fruits</h4><p>Compress images without losing quality (N7) and fix server caching, which are the fastest speed wins. Switch on in-store stock visibility, since store stock already flows through the systems. Turn the plain-text service links into proper buttons, with one primary call-to-action. Add live video shopping through the Poppin plugin and an appointment booking button on every product page.</p></div>
+    <div class="step"><span class="cut"><svg width="22" height="22"><use href="#pear"/></svg></span><h4>Days 30–60 · Build on the wins</h4><p>Defer render-blocking scripts and fonts. Show colour variants as swatches on the product page and add more images per watch. Launch the trade-in valuation and start the AI visibility programme with Siftly.</p></div>
+    <div class="step" style="margin:0"><span class="cut"><svg width="22" height="22"><use href="#trillion"/></svg></span><h4>Days 60–90 · Scale</h4><p>Launch guided browsing by occasion and budget and the two-way Watch Guide links. Pilot virtual try-on and roll out lead scoring, with hot visitors going to an advisor within 15 minutes. Review leads, appointments and AI-referred sessions against the KPIs.</p></div>
+  </div>
+</section>
+
+<div class="sig"><span class="cut"><svg width="22" height="22"><use href="#brilliant"/></svg></span><div>Thank you</div></div>
+
+</div>
+
+<script>
+document.querySelectorAll('.glass').forEach(g=>g.addEventListener('pointermove',e=>{
+  const r=g.getBoundingClientRect();
+  g.style.setProperty('--mx',(e.clientX-r.left)+'px');
+  g.style.setProperty('--my',(e.clientY-r.top)+'px');
+}));
+</script>
+</body>
+</html>
