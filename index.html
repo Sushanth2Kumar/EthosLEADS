@@ -32,13 +32,13 @@ body{overflow-x:hidden;font-family:var(--sans);font-weight:400;color:var(--ink);
 @keyframes wordSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-.page{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:72px 20px 96px}
+.page{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:40px 20px 96px}
 
 .cut{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold)}
 .cut svg{display:block}
 
 /* Hero */
-.hero{padding:24px 8px 56px}
+.hero{padding:0 8px 40px}
 .mark{position:relative;width:56px;height:56px;margin-bottom:28px}
 .mark .cut{animation:spin 18s linear infinite}
 .mark .ring{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(157,0,0,.35);animation:spin 30s linear infinite reverse}
@@ -169,8 +169,6 @@ ol.n li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0
 <div class="page">
 
 <header class="hero">
-  <div class="mark"><span class="ring"></span><span class="cut"><svg width="56" height="56"><use href="#brilliant"/></svg></span></div>
-  <div class="eyebrow">Ethos Watches · Growth Plan</div>
   <h1 class="title"><span class="w">website improvement</span> <span class="w">strategies for</span> <span class="w"><em>lead generation</em></span></h1>
   <div class="promises">
     <div class="promise"><span class="cut"><svg width="22" height="22"><use href="#marquise"/></svg></span><div class="metric"><em>I</em> Discover</div><div class="lbl">Richer catalogue</div></div>
